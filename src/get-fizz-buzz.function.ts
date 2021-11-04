@@ -9,8 +9,12 @@ const isMultiplesOf3 = isMultiplesOfNumber(3);
 
 const isMultiplesOf5 = isMultiplesOfNumber(5);
 
-const getFizzBuzzString = (num: number): string =>
-  `${isMultiplesOf3(num) ? 'Fizz' : ''}${isMultiplesOf5(num) ? 'Buzz' : ''}`;
+const getFizzBuzzString = (num: number): string | number => {
+  if (isMultiplesOf3(num) && !isMultiplesOf5(num)) return 'Fizz';
+  if (!isMultiplesOf3(num) && isMultiplesOf5(num)) return 'Buzz';
+  if (isMultiplesOf3(num) && isMultiplesOf5(num)) return 'FizzBuzz';
+  return num;
+};
 
 export const getFizzBuzzObject = (
   length: number
