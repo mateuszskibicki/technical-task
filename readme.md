@@ -12,6 +12,7 @@ The technical task is as follows, and you may use any language you wish to compl
 - install dependencies (`npm install` or `yarn`)
 - run code (`npm run start` or `yarn start`)
 - prompt will ask you to provide length of the array (if error or not provided - default is `100`)
+- prompt will ask you how to display values (object/array/for loop)
 - you should see logged object now
 - run tests - `npm run test` or `yarn test`
 
